@@ -1,9 +1,10 @@
 module "solution" {
-  source  = "aztfmod/caf/azurerm"
-  version = "~>5.4.2"
+  #source  = "aztfmod/caf/azurerm"
+  #version = "~>5.4.2"
 
   # source = "git::https://github.com/aztfmod/terraform-azurerm-caf.git?ref=patch.5.4.6"
   # source = "../../aztfmod"
+  source = "../../terraform-azurerm-caf-hriaz"
 
   azuread                               = local.azuread
   cloud                                 = local.cloud
@@ -31,6 +32,7 @@ module "solution" {
   logged_user_objectId                  = var.logged_user_objectId
   logic_app                             = var.logic_app
   managed_identities                    = var.managed_identities
+  marketplace_agreement                = var.marketplace_agreement
   networking                            = local.networking
   random_strings                        = var.random_strings
   remote_objects                        = local.remote
